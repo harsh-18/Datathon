@@ -1,9 +1,13 @@
-# KSP Crime Intelligence & Analytics Platform
+# CrimeLens Karnataka
 
 **KSP Datathon 2026 Submission** | **Problem Statement 2: AI-Driven Crime Analytics & Visualization Platform**  
+**Project Name**: CrimeLens Karnataka  
+**Zoho Catalyst Project**: `CrimeLens-Karnataka`  
 **Target Organization**: Karnataka State Police (KSP) / State Crime Records Bureau (SCRB)  
 **Deployment Target**: Zoho Catalyst (Web Client Hosting & Serverless Functions)  
 **GitHub Repository**: [https://github.com/harsh-18/Datathon](https://github.com/harsh-18/Datathon)  
+
+> **"CrimeLens Karnataka"** is a Catalyst-powered AI crime analytics and visualization platform for Karnataka State Police. It transforms fragmented crime records into interactive dashboards, hotspot maps, offender profiles, criminal network graphs, and explainable risk alerts to support proactive, evidence-based policing.
 
 ---
 
@@ -32,7 +36,8 @@
 ---
 
 ## 1. Project Title & Problem Statement
-- **Project Title**: KSP Crime Intelligence & Analytics Platform
+- **Project Title**: CrimeLens Karnataka
+- **Zoho Catalyst Project**: `CrimeLens-Karnataka`
 - **Chosen Challenge**: Problem Statement 2 - AI-Driven Crime Analytics & Visualization Platform
 - **Host Organization**: Karnataka State Police (KSP) / State Crime Records Bureau (SCRB)
 
@@ -41,12 +46,12 @@
 ## 2. Problem Selection Rationale
 Currently, crime records across Karnataka police stations are managed in fragmented silos, leading to reliance on manual Excel reporting. This reactive approach makes it difficult for SCRB analysts and station SHOs to spot cross-border crime spikes, track repeat offenders operating across district boundaries, or dispatch early patrols to emerging hotspots.
 
-We selected Problem Statement 2 to build a modern, state-of-the-art visual analytics platform that transforms static FIR records into proactive, evidence-based policing capabilities.
+We selected Problem Statement 2 to build **CrimeLens Karnataka** — a modern, state-of-the-art visual analytics platform that transforms static FIR records into proactive, evidence-based policing capabilities.
 
 ---
 
 ## 3. Solution Overview
-The **KSP Crime Intelligence & Analytics Platform** is a high-contrast operational command dashboard designed for police leadership, SCRB analysts, and field investigators. Built for **Zoho Catalyst**, it combines geospatial hotspot maps, criminal network link graphs, spatiotemporal trend analysis, and explainable AI risk scoring into a unified decision support system.
+**CrimeLens Karnataka** is a high-contrast operational command dashboard designed for police leadership, SCRB analysts, and field investigators. Built for **Zoho Catalyst** (Project: `CrimeLens-Karnataka`), it combines geospatial hotspot maps, criminal network link graphs, spatiotemporal trend analysis, and explainable AI risk scoring into a unified decision support system.
 
 ---
 
@@ -56,7 +61,7 @@ The **KSP Crime Intelligence & Analytics Platform** is a high-contrast operation
 3. **Geospatial Hotspot Map**: Interactive dark Leaflet map of Karnataka with color-coded severity markers and recommended tactical police actions.
 4. **Spatiotemporal Trend Analysis**: Monthly crime trajectories, 24-hour time-of-day peak incident distribution, and automated analytical callouts.
 5. **Criminal Network & Link Graph**: Interactive SVG network graph connecting Suspects, FIR Cases, Locations, and Modus Operandi (MO) signatures with an inspector side panel.
-6. **Repeat Offender Intelligence Profiles**: Intelligence cards tracking active jurisdictions, linked FIR numbers, known associates, MO tags, and SCRB advisories.
+6. **Repeat & Habitual Offender Profiles**: Intelligence cards tracking active jurisdictions, linked FIR numbers, known associates, MO tags, and SCRB advisories.
 7. **Explainable AI Predictive Risk Engine**: Interactive risk calculation engine allowing analysts to adjust factor weights (Spike %, Repeat Offender Weight, Night Crime Weight, Socio Index) with clear explanation factors.
 8. **Anomaly & Emerging Trend Alerts**: Emergency alert feed highlighting multi-station FIR spikes, trojan APK phishing clusters, and highway cargo gangs.
 9. **Socio-Demographic Correlations**: Analytical correlation cards mapping urbanization, economic stress, migration, and unemployment against specific crime types.
@@ -150,7 +155,7 @@ node tests/sanity.test.js
 ```bash
 npm install -g zcatalyst-cli
 catalyst login
-catalyst project:use <your_catalyst_project_id>
+catalyst project:use 42972000000042001
 ```
 
 ---

@@ -10,17 +10,17 @@ export default function Header() {
         </div>
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-lg font-bold text-white tracking-wide">KARNATAKA STATE POLICE</h1>
-            <span className="bg-blue-950 text-blue-300 text-xs px-2 py-0.5 rounded font-mono border border-blue-800">SCRB INTELLIGENCE</span>
+            <h1 className="text-lg font-extrabold text-white tracking-wide">CrimeLens Karnataka</h1>
+            <span className="bg-blue-950 text-blue-300 text-xs px-2 py-0.5 rounded font-mono border border-blue-800">KSP SCRB INTELLIGENCE</span>
           </div>
-          <p className="text-xs text-gray-400">AI-Driven Crime Analytics & Decision Support Platform</p>
+          <p className="text-xs text-gray-400">Catalyst-Powered AI Crime Analytics & Visualization Platform</p>
         </div>
       </div>
 
       <div className="flex items-center gap-4 flex-wrap">
         <div className="flex items-center gap-2 bg-gray-800/80 px-3 py-1.5 rounded-lg border border-gray-700 text-xs">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span className="text-gray-300 font-medium">Catalyst Node: Active</span>
+          <span className="text-gray-300 font-medium">Project: CrimeLens-Karnataka</span>
           <Server className="w-3.5 h-3.5 text-emerald-400 ml-1" />
         </div>
 

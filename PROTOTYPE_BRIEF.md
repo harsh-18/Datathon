@@ -1,6 +1,8 @@
-# PROTOTYPE BRIEF: KSP Crime Intelligence & Analytics Platform
+# PROTOTYPE BRIEF: CrimeLens Karnataka
 
 **KSP Datathon 2026 Submission**  
+**Project Name**: CrimeLens Karnataka  
+**Zoho Catalyst Project**: `CrimeLens-Karnataka`  
 **Chosen Problem Statement**: Problem Statement 2: AI-Driven Crime Analytics & Visualization Platform  
 **Target Organization**: Karnataka State Police (KSP) / State Crime Records Bureau (SCRB)  
 **Deployment Platform**: Zoho Catalyst  
@@ -15,9 +17,9 @@ The goal of this project is to build a state-of-the-art AI-driven crime analytic
 ---
 
 ## 2. Solution Overview
-The **KSP Crime Intelligence & Analytics Platform** is an enterprise-grade operational dashboard designed specifically for police decision-makers, SCRB analysts, station SHOs, and field investigators. It consolidates incident FIR records, offender registries, geospatial hotspot intelligence, and spatiotemporal trend data into a unified, high-contrast operational command interface.
+**CrimeLens Karnataka** is a Catalyst-powered AI crime analytics and visualization platform for the Karnataka State Police. It transforms fragmented crime records into interactive dashboards, geospatial hotspot maps, repeat offender profiles, criminal network link graphs, and explainable risk alerts to support proactive, evidence-based policing.
 
-Built natively for **Zoho Catalyst**, the platform delivers real-time decision support, automated anomaly detection, criminal association network graphs, and explainable AI risk scoring.
+Built natively for **Zoho Catalyst** (Project: `CrimeLens-Karnataka`), the platform delivers real-time decision support, automated anomaly detection, criminal association network graphs, and explainable AI risk scoring.
 
 ---
 

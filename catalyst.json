@@ -9,8 +9,7 @@
     ],
     "ksp_api": {
       "name": "ksp_api",
-      "source": "functions/ksp_api",
-      "type": "Express"
+      "source": "functions/ksp_api"
     }
   }
 }
