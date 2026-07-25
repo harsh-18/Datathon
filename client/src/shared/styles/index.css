@@ -2,100 +2,296 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg-primary: #0b0f19;
-  --bg-surface: #111827;
-  --bg-card: #1f2937;
-  --bg-card-hover: #374151;
-  
-  --border-color: #374151;
-  --border-accent: #4f46e5;
-  
-  --text-main: #f9fafb;
-  --text-muted: #9ca3af;
-  --text-dim: #6b7280;
-  
-  --accent-gold: #f59e0b;
-  --accent-blue: #3b82f6;
-  --accent-cyan: #06b6d4;
-  --accent-red: #ef4444;
-  --accent-emerald: #10b981;
-}
+/* ============================================================
+   CrimeLens Karnataka — Premium Dark Operational Theme
+   ============================================================ */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--bg-primary);
-  color: var(--text-main);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #0b0f19;
-}
-::-webkit-scrollbar-thumb {
-  background: #374151;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #4b5563;
-}
-
-.ksp-card {
-  background-color: #111827;
-  border: 1px solid #1f2937;
-  border-radius: 0.5rem;
-  padding: 1.25rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-  transition: border-color 0.2s ease-in-out;
-}
-
-.ksp-card:hover {
-  border-color: #374151;
-}
-
-.ksp-card-interactive {
-  cursor: pointer;
-}
-.ksp-card-interactive:hover {
-  border-color: #3b82f6;
-  background-color: #1a2234;
-}
-
-@keyframes pulse-red {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+@layer base {
+  :root {
+    --bg-primary: #0a0e1a;
+    --bg-surface: #111827;
+    --bg-card: #151d2e;
+    --border-subtle: #1e293b;
+    --accent-blue: #3b82f6;
+    --accent-cyan: #06b6d4;
+    --accent-emerald: #10b981;
+    --accent-amber: #f59e0b;
+    --accent-red: #ef4444;
+    --text-primary: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
   }
-  50% {
-    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    line-height: 1.5;
+  }
+
+  /* Premium scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0e1a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+
+  /* Smooth selection */
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.3);
+    color: #f1f5f9;
   }
 }
 
-.alert-pulse-critical {
-  animation: pulse-red 2s infinite;
+@layer components {
+  /* ─── Card System ─── */
+  .ksp-card {
+    @apply bg-[#131b2e] border border-[#1e293b] rounded-xl p-5;
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  }
+
+  .ksp-card:hover {
+    border-color: #293548;
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  }
+
+  .ksp-card-interactive {
+    @apply ksp-card cursor-pointer;
+  }
+
+  .ksp-card-interactive:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(59, 130, 246, 0.15) inset,
+      0 0 30px rgba(59, 130, 246, 0.05);
+  }
+
+  /* ─── Glassmorphism Cards ─── */
+  .ksp-glass {
+    @apply rounded-xl p-5;
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* ─── Section Headers ─── */
+  .ksp-section-header {
+    @apply flex items-center justify-between mb-5 pb-3 border-b border-[#1e293b]/80;
+  }
+
+  .ksp-section-title {
+    @apply text-sm font-bold text-slate-200 uppercase tracking-widest flex items-center gap-2.5;
+  }
+
+  /* ─── Badge System ─── */
+  .ksp-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold border;
+  }
+
+  .ksp-badge-critical {
+    @apply ksp-badge bg-red-950/60 text-red-400 border-red-800/60;
+  }
+  .ksp-badge-high {
+    @apply ksp-badge bg-amber-950/60 text-amber-400 border-amber-800/60;
+  }
+  .ksp-badge-medium {
+    @apply ksp-badge bg-yellow-950/60 text-yellow-400 border-yellow-800/60;
+  }
+  .ksp-badge-low {
+    @apply ksp-badge bg-emerald-950/60 text-emerald-400 border-emerald-800/60;
+  }
+
+  /* ─── Stat Card Accent Borders ─── */
+  .ksp-stat-blue {
+    border-left: 3px solid #3b82f6;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.06) 0%, #131b2e 60%);
+  }
+  .ksp-stat-red {
+    border-left: 3px solid #ef4444;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.06) 0%, #131b2e 60%);
+  }
+  .ksp-stat-amber {
+    border-left: 3px solid #f59e0b;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.06) 0%, #131b2e 60%);
+  }
+  .ksp-stat-emerald {
+    border-left: 3px solid #10b981;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, #131b2e 60%);
+  }
+  .ksp-stat-purple {
+    border-left: 3px solid #8b5cf6;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.06) 0%, #131b2e 60%);
+  }
+
+  /* ─── Buttons ─── */
+  .ksp-btn-primary {
+    @apply bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-lg 
+           flex items-center gap-2 transition-all shadow-md shadow-blue-900/30 hover:shadow-blue-800/40;
+  }
+
+  .ksp-btn-danger {
+    @apply bg-red-600/80 hover:bg-red-500/80 text-white text-xs font-semibold px-4 py-2 rounded-lg 
+           flex items-center gap-2 transition-all;
+  }
+
+  .ksp-btn-ghost {
+    @apply text-slate-400 hover:text-white text-xs font-medium px-3 py-2 rounded-lg 
+           hover:bg-white/5 transition-all flex items-center gap-2;
+  }
+
+  /* ─── Form Controls ─── */
+  .ksp-select {
+    @apply bg-[#0d1321] border border-[#1e293b] text-slate-200 text-xs rounded-lg px-3 py-2
+           focus:outline-none focus:border-blue-500/60 focus:ring-1 focus:ring-blue-500/20
+           transition-all appearance-none cursor-pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 28px;
+  }
+
+  .ksp-input {
+    @apply bg-[#0d1321] border border-[#1e293b] text-slate-200 text-sm rounded-lg px-4 py-2.5
+           focus:outline-none focus:border-blue-500/60 focus:ring-1 focus:ring-blue-500/20
+           placeholder-slate-600 transition-all w-full;
+  }
+
+  /* ─── Slider ─── */
+  input[type="range"] {
+    @apply w-full h-1.5 rounded-full appearance-none cursor-pointer;
+    background: linear-gradient(to right, #3b82f6, #1e293b);
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 rounded-full bg-blue-500 border-2 border-blue-400 shadow-lg;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+  }
+
+  /* ─── Tables ─── */
+  .ksp-table {
+    @apply w-full text-left text-xs;
+  }
+  .ksp-table thead tr {
+    @apply text-slate-500 border-b border-[#1e293b] font-medium uppercase tracking-wider text-[10px];
+  }
+  .ksp-table tbody tr {
+    @apply border-b border-[#1e293b]/40 hover:bg-white/[0.02] transition-colors;
+  }
+  .ksp-table th {
+    @apply pb-3 pr-4;
+  }
+  .ksp-table td {
+    @apply py-3 pr-4;
+  }
+
+  /* ─── Progress Bars ─── */
+  .ksp-progress {
+    @apply w-full bg-[#0d1321] rounded-full h-1.5 overflow-hidden border border-[#1e293b]/50;
+  }
+  .ksp-progress-fill {
+    @apply h-full rounded-full transition-all duration-500 ease-out;
+  }
 }
 
+@layer utilities {
+  /* ─── Animated Alerts ─── */
+  .alert-pulse-critical {
+    animation: pulseCritical 2s infinite;
+  }
+
+  @keyframes pulseCritical {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  }
+
+  .alert-glow-blue {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.15), 0 0 0 1px rgba(59, 130, 246, 0.1);
+  }
+
+  /* ─── Gradient Borders ─── */
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), transparent 50%);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+  }
+
+  /* ─── Text Gradients ─── */
+  .text-gradient-blue {
+    @apply bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+  .text-gradient-danger {
+    @apply bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent;
+  }
+}
+
+/* ─── Leaflet Dark Theme Override ─── */
 .leaflet-container {
-  background-color: #0b0f19 !important;
-  font-family: inherit;
+  background-color: #0a0e1a !important;
+  font-family: 'Inter', sans-serif;
+  border-radius: 0.75rem;
 }
 .leaflet-popup-content-wrapper {
-  background-color: #1f2937 !important;
-  color: #f9fafb !important;
-  border: 1px solid #374151;
-  border-radius: 8px !important;
+  background-color: #151d2e !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #1e293b;
+  border-radius: 12px !important;
   padding: 4px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
 }
 .leaflet-popup-tip {
-  background-color: #1f2937 !important;
+  background-color: #151d2e !important;
+}
+.leaflet-control-zoom a {
+  background-color: #151d2e !important;
+  color: #94a3b8 !important;
+  border-color: #1e293b !important;
+}
+.leaflet-control-zoom a:hover {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+.leaflet-control-attribution {
+  background-color: rgba(10, 14, 26, 0.8) !important;
+  color: #475569 !important;
+  font-size: 9px !important;
 }
