@@ -36,7 +36,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -52,7 +51,6 @@ body {
   background: #4b5563;
 }
 
-/* Glass & Card styles */
 .ksp-card {
   background-color: #111827;
   border: 1px solid #1f2937;
@@ -74,7 +72,6 @@ body {
   background-color: #1a2234;
 }
 
-/* Pulse animation for active alerts */
 @keyframes pulse-red {
   0%, 100% {
     box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
@@ -88,7 +85,6 @@ body {
   animation: pulse-red 2s infinite;
 }
 
-/* Custom Leaflet Dark map container styling */
 .leaflet-container {
   background-color: #0b0f19 !important;
   font-family: inherit;
