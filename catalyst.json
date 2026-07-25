@@ -1,9 +1,9 @@
-{
+﻿{
   "client": {
-    "source": "client",
-    "build": "dist"
+    "source": "client/dist"
   },
   "functions": {
+    "source": "functions",
     "targets": [
       "ksp_api"
     ]
