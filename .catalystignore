@@ -1,0 +1,7 @@
+node_modules/
+client/node_modules/
+functions/ksp_api/node_modules/
+.git/
+.vscode/
+*.log
+catalyst-debug.log

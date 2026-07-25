@@ -1,0 +1,6 @@
+{
+  "name": "ksp_api",
+  "type": "Express",
+  "stack": "node18",
+  "main": "index.js"
+}

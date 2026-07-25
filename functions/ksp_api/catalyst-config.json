@@ -1,6 +1,12 @@
-{
-  "name": "ksp_api",
-  "type": "Express",
-  "stack": "node18",
-  "main": "index.js"
+﻿{
+  "deployment": {
+    "name": "ksp_api",
+    "stack": "node18",
+    "type": "advancedio",
+    "memory": 256,
+    "env_variables": {}
+  },
+  "execution": {
+    "main": "index.js"
+  }
 }
