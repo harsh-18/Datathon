@@ -1,0 +1,14 @@
+{
+  "name": "ksp_api",
+  "version": "1.0.0",
+  "description": "KSP Crime Intelligence & Analytics Platform API for Zoho Catalyst",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "zcatalyst-sdk-node": "^1.0.0"
+  }
+}

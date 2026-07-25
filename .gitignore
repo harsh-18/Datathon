@@ -3,6 +3,12 @@
 *.ppt
 *.key
 
-# OS generated files
+# Catalyst CLI debug logs
+catalyst-debug.log
+
+# Node dependencies and build artifacts
+node_modules/
+dist/
+build/
 .DS_Store
 Thumbs.db

@@ -1,0 +1,16 @@
+{
+  "client": {
+    "source": "client",
+    "build": "client/dist"
+  },
+  "functions": {
+    "targets": [
+      "ksp_api"
+    ],
+    "ksp_api": {
+      "name": "ksp_api",
+      "source": "functions/ksp_api",
+      "type": "Express"
+    }
+  }
+}

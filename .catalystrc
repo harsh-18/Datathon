@@ -1,0 +1,30 @@
+{
+  "name": "Datathon",
+  "defaults": {
+    "project": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "42972000000013025",
+      "name": "Project-Rainfall",
+      "domain": {
+        "id": "50042646149",
+        "name": "project-rainfall-60072905574.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60072905574",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}
