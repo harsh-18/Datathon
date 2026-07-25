@@ -1,21 +1,23 @@
 import React from 'react';
 
+const levelStyles = {
+  Critical: 'ksp-badge-critical',
+  High: 'ksp-badge-high',
+  Medium: 'ksp-badge-medium',
+  Low: 'ksp-badge-low',
+};
+
 export default function RiskBadge({ level, score }) {
-  let badgeClass = "bg-emerald-900/60 text-emerald-400 border-emerald-700";
-  
-  if (level === 'Critical' || (score && score >= 85)) {
-    badgeClass = "bg-red-950/80 text-red-400 border-red-700 alert-pulse-critical";
-  } else if (level === 'High' || (score && score >= 70)) {
-    badgeClass = "bg-amber-950/80 text-amber-400 border-amber-700";
-  } else if (level === 'Medium' || (score && score >= 50)) {
-    badgeClass = "bg-yellow-950/80 text-yellow-400 border-yellow-700";
-  }
+  const computedLevel = level || (score >= 85 ? 'Critical' : score >= 60 ? 'High' : score >= 40 ? 'Medium' : 'Low');
+  const badgeClass = levelStyles[computedLevel] || levelStyles.Low;
 
   return (
-    <span className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold border ${badgeClass}`}>
+    <span className={badgeClass}>
       <span className="w-1.5 h-1.5 rounded-full bg-current"></span>
-      {level || (score >= 85 ? 'Critical' : score >= 70 ? 'High' : score >= 50 ? 'Medium' : 'Low')}
-      {score !== undefined && <span className="opacity-85 font-mono">({score})</span>}
+      {computedLevel}
+      {score !== undefined && (
+        <span className="opacity-70 font-mono ml-0.5">({score})</span>
+      )}
     </span>
   );
 }
