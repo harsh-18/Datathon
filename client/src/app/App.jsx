@@ -87,7 +87,7 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-[#0b0f19] text-gray-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-ksp-bg text-slate-100 flex flex-col font-sans antialiased">
       <Header />
 
       <div className="flex flex-1">
